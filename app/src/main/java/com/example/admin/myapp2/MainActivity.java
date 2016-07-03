@@ -45,34 +45,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         alertDialogBuilder.setTitle("タイトル");
         alertDialogBuilder.setMessage("メッセージ");
 
-        // 肯定ボタンに表示される文字列、押したときのリスナーを設定する
-        alertDialogBuilder.setPositiveButton("肯定",
-                new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Log.d("UI_PARTS", "肯定ボタン");
-                    }
-                });
+        // 工程ボタンに表示される文字列、押したときのリスナーを設定する
+        alertDialogBuilder.setPositiveButton("肯定", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int which) {
+                Log.d("UI_PARTS", "肯定ボタン");
+            }
+        });
 
-        // 中立ボタンに表示される文字列、押したときのリスナーを設定する
-        alertDialogBuilder.setNeutralButton("中立",
-                new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Log.d("UI_PARTS", "中立ボタン");
-                    }
-                });
+        //中立のたんに表示される文字列、押したときのリスナーを設定する
+        alertDialogBuilder.setNeutralButton("中立", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int which) {
+                Log.d("UI_PARTS", "中立ボタン");
+            }
+        });
 
-        // 否定ボタンに表示される文字列、押したときのリスナーを設定する
-        alertDialogBuilder.setNegativeButton("否定",
-                new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Log.d("UI_PARTS", "否定ボタン");
-                    }
-                });
+        //否定ボタンに表示される文字列、押した時のリスナーを設定する
+        alertDialogBuilder.setNegativeButton("否定", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int which) {
+                Log.d("UI_PARTS", "否定ボタン");
+            }
+        });
 
-        // AlertDialogを作成して表示する
+        //AlertDiaLogを作成して表示する。
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
     }
